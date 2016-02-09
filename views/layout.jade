@@ -1,0 +1,14 @@
+doctype
+html
+  include ./includes/head.jade
+  body.site
+    header.header
+      include ./includes/nav.jade
+      include ./includes/logo.jade
+    .container
+      block title
+      .content-body
+        block content
+    footer.footer
+      p copyright &copy; 2015 - Emily Roth, emroth.com
+    block scripts

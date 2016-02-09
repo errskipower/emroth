@@ -1,0 +1,50 @@
+//- about.jade
+extend layout
+block title
+  h2.content-title
+    div.content-title-first Get to know
+    span.content-title-second 
+      span.content-title-second-text Emily Roth
+    
+block content
+  div.wow.fadeIn(data-wow-duration="1s")
+    h3.about-title Hobbies
+    ul.about-list
+      li.about-list-item
+        i.fa.fa-angle-right 
+        | Skiing
+      li.about-list-item
+        i.fa.fa-angle-right 
+        | Fitness
+      li.about-list-item
+        i.fa.fa-angle-right 
+        | Cooking
+      li.about-list-item
+        i.fa.fa-angle-right 
+        | Concerts (pop-punk, alternative rock)
+      li.about-list-item
+        i.fa.fa-angle-right 
+        | Web development &amp; design
+    h3.about-title Profession
+    ul.about-list
+      li.about-list-item 
+        i.fa.fa-angle-right 
+        | Wayfair - Software Engineer - Dev Tools
+      li.about-list-item
+        i.fa.fa-angle-right
+        | Rensselaer Polytechnic Institute - B.S. Information Technology - Web Technologies
+    h3.about-title Social
+    span.social.wow.flipInX
+      a.social-link(href="https://www.linkedin.com/in/emilyrroth")
+        i.fa.fa-linkedin-square
+    span.social.wow.flipInX
+      a.social-link(href="https://github.com/errskipower")
+        i.fa.fa-github-square
+    span.social.wow.flipInX
+      a.social-link(href="https://www.facebook.com/emilyrroth")
+        i.fa.fa-facebook-square
+    span.social.wow.flipInX
+      a.social-link(href="https://twitter.com/emilyrroth")
+        i.fa.fa-twitter-square
+
+block scripts

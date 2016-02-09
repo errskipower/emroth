@@ -1,0 +1,51 @@
+.header
+  .nav
+    float right
+    
+    .mobile-nav
+      display none
+
+    .nav-list
+      position relative
+      width auto
+      right auto
+      background none
+      display block
+      padding 3px 0 0
+      
+      .nav-item
+        display inline-block
+        
+        &:last-of-type
+          padding-right 0
+        
+        &.active-page
+          .nav-link:not(.home)
+            color dark-green
+            border-bottom 3px solid dark-green
+            padding-bottom 10px
+          
+          &:after
+            content ''
+            padding 0
+        
+        .nav-link
+          color dark-purple
+          font-size 12px
+          padding 0 15px
+
+
+
+.content-title 
+  
+  .content-title-first 
+    font-size 72px
+  
+  .content-title-second 
+    
+    .content-title-second-text
+      font-size 64px
+      
+    .content-title-and
+      font-size 49px
+

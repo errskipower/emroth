@@ -1,0 +1,503 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+@import 'nib/gradients'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700,900')
+
+
+/*
+ * Nib CSS reset
+ */
+global-reset()
+
+
+/*
+ * Color variables
+ */
+purple = #d8cee7
+dark-purple = #5e566b
+green = #c2fc92
+dark-green = #9bc974
+white = #fff
+black = #222
+grey = #7a757a
+light-grey = #b4b1b4
+dark-grey = #444
+
+text-color = black
+header-color = grey
+
+
+/*
+ * Font variables
+ */
+font-awesome = 'FontAwesome'
+raleway = 'Raleway'
+
+body-font = raleway
+header-font = raleway
+
+
+/*
+ * Main layout
+ */
+html
+  height 100%
+  box-sizing border-box
+  
+body
+  font-family body-font
+  background linear-gradient(top left, purple 0%, purple 41%, green 100%)
+  background-attachment fixed
+  color text-color
+  position relative
+  
+.site
+  display flex
+  flex-direction column
+  min-height 100vh 
+
+/*
+ * Global Styles
+ */
+.hidden
+  display none !important
+
+.visible
+  display block !important
+
+.white-text
+  color white
+
+.grey-text
+  color grey
+
+/*
+ * Header 
+ */
+.header
+  background white
+  font-family header-font
+  padding 5px 10px
+  box-shadow 0 1px 3px alpha(#000, .11)
+  
+  .logo-link
+    text-decoration none
+    color header-color
+    text-align center
+    float left
+     
+    .title
+      font-weight 900
+      font-size 24px
+      margin-right 5px
+      word-spacing -2px
+    
+    .subtitle
+      font-family raleway
+      font-size 10px
+      letter-spacing 2px
+      margin-top -1px
+    
+  /*
+   * Navigation
+   */  
+  .nav
+    
+    .mobile-nav
+      float right
+      line-height 2.1
+      cursor pointer
+      z-index 5
+      position relative
+    
+    .nav-list
+      display none
+      position absolute
+      top 0
+      right -30%
+      width 30%
+      height 100%
+      background alpha(dark-purple, .98)
+      padding 10px
+      z-index 1
+      
+      .nav-item
+        padding 6px 0
+        
+        &.active-page:after
+          content '\f0d9'
+          font-family font-awesome
+          color white
+          font-size 10px
+          padding 5px
+        
+        .nav-link
+          text-decoration none
+          color purple
+  
+/*
+ * Container
+ */
+.container
+  margin 0
+  flex 1
+  display flex
+  flex-direction column
+  
+/*
+ * Footer
+ */
+.footer
+  font-size 9px
+  color white
+  text-align center
+  padding 10px 0
+  width 100%
+  background dark-grey
+
+/*
+ * Content
+ */
+.content-title
+  font-weight bold
+  color white
+  text-shadow 0 1px 1px alpha(black, .16)
+  text-transform uppercase
+  line-height .65
+  padding 40px 10px 36px
+  
+  &.one-line
+    padding 40px 10px
+  
+  .content-title-first 
+    font-size 48px
+  
+  .content-title-second 
+    text-indent 50%
+    float left
+    
+    .content-title-second-text
+      font-size 40px
+      
+    .content-title-and
+      font-size 26px
+      margin-right 20px
+      margin-top 10px
+
+.content-body
+  flex 1
+  margin 0
+  padding 10px
+  background dark-grey
+  color white
+
+/*
+ * Homepage
+ */
+.recent-work-bkg
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background url('../images/work-apollo.jpg')
+  background-size cover
+  background-position-x 30%
+  z-index -1
+  opacity .1
+
+.call-to-action
+  display block
+  font-size 16px
+  
+  .call-to-action-line
+    margin 35px 0
+    
+    a
+      color green
+      text-decoration none
+      font-weight 500
+  
+/*
+ * Projects
+ */
+.project-list
+  display flex
+  flex-direction column
+  margin 5px 0 
+
+.project
+  flex 1
+  margin 10px 0
+  padding 5px
+  
+  .project-desc,
+  .project-title
+    padding 4px;
+  
+  .project-img img
+    width 100%
+  
+  .project-title
+    display inline-block
+    font-family header-font
+    font-weight bold
+    text-transform uppercase
+    font-size 18px
+    vertical-align text-top
+    
+  button.project-btn
+    padding 3px 4px 2px
+    
+  .project-btn
+    border 0
+    border-radius 4px
+    background white
+    margin 0 2px
+    font-size 9px
+    padding 2px 4px
+    color dark-purple
+    text-decoration none
+    display inline-block
+    line-height 1
+    outline 0
+    
+    .fa
+      margin-left 2px
+      
+    &.less
+      padding-bottom 12px
+
+  .project-desc
+    font-size 12px
+    font-weight 300
+    margin-top -3px
+    border-radius 5px
+    background white
+    color dark-grey
+    line-height 1.5
+    padding 6px 10px 
+    -webkit-transition-duration 0.8s;
+    
+    a
+      color dark-green
+      outline none
+    
+  .project-tags
+    padding 2px
+    display flex
+    flex-wrap wrap
+    text-align center
+    
+    &::after
+      content ''
+      flex-grow 1000000
+    
+  .tag
+    display inline-block
+    border-radius 2px 
+    padding 3px 5px
+    background dark-purple
+    color white
+    font-size 10px
+    margin 2px
+    flex-grow 1
+
+.hire-me
+  margin 45px 0 20px
+  
+  .hire-me-title
+    color white
+    font-weight bold
+    font-size 34px
+    text-transform uppercase
+    
+  .hire-me-link
+    display block
+    background dark-purple
+    text-align center
+    border-radius 5px
+    border .1em solid alpha(purple, .23)
+    padding 15px 10px
+    margin 10px 0
+    color white
+    text-decoration none
+    transition background .5s ease
+    
+    &:hover
+      background lighten(dark-purple, 10%)
+    
+/*
+ * Skills
+ */
+.skills-list
+  display flex
+  flex-direction column
+  margin 5px 0 
+
+.skill
+  flex 1
+  background dark-purple
+  margin 10px 0
+  padding 20px 8px
+  color white
+  display flex
+  border-radius 5px
+  
+  .skill-name
+    font-size 26px
+    display inline-block
+    font-weight 200 
+  
+  .skill-level
+    flex-grow 1
+    flex-basis 82%
+
+  &:nth-of-type(even) .skill-circle
+    border-color purple
+    
+    &.full
+      background purple
+    
+  .skill-circle
+    display inline-block
+    float right
+    width 15px
+    height 10px
+    border-width 2px 0
+    border-style solid 
+    border-color green
+    margin 8px 0
+    
+    &:first-of-type
+      border-right-width 2px
+    
+    &.full
+      background green
+  
+/*
+ * About
+ */
+.about-title
+  color purple
+  text-transform uppercase
+  font-weight 600
+  font-size 20px
+  margin 20px 0 10px
+  
+.about-list
+  font-weight 200
+
+  .about-list-item
+    padding 3px 0
+    text-transform lowercase
+    
+    .fa
+      padding-right 4px
+      font-size 14px
+
+.social
+  margin 0 5px
+  
+  .social-link
+    font-size 20px
+    color white
+    
+
+/*
+ * Contact/Hire
+ */
+.contact-form
+  
+  .input-wrap
+    margin 35px 0
+    
+    &:first-of-type
+      margin-top 20px
+    
+  .contact-input
+    border-width 0 0 2px
+    border-color dark-purple
+    border-style solid
+    background none
+    padding 1px 0 2px 2px
+    font-size 18px
+    font-weight 200
+    font-family raleway
+    width 100%
+    outline 0
+    color white
+    box-sizing border-box
+    
+    &:focus::-webkit-input-placeholder /* Chrome/Opera/Safari */
+      color alpha(white, .2)
+      padding-bottom 10px
+    &:focus::-moz-placeholder /* Firefox 19+ */
+      color alpha(white, .2)
+      padding-bottom 10px
+    &:focus:-ms-input-placeholder /* IE 10+ */
+      color alpha(white, .2)
+      padding-bottom 10px
+    &:focus:-moz-placeholder /* Firefox 18- */
+      color alpha(white, .2)
+      padding-bottom 10px
+      
+    &::-webkit-input-placeholder /* Chrome/Opera/Safari */
+      color alpha(white, .7)
+      font-size 12px
+      transition 80ms all ease-in-out
+      line-height 2.2
+    &::-moz-placeholder /* Firefox 19+ */
+      color alpha(white, .7)
+      font-size 12px
+      transition 80ms all ease-in-out
+      line-height 2.2
+    &:-ms-input-placeholder /* IE 10+ */
+      color alpha(white, .7)
+      font-size 12px
+      transition 80ms all ease-in-out
+      line-height 2.2
+    &:-moz-placeholder /* Firefox 18- */
+      color alpha(white, .7)
+      font-size 12px
+      transition 80ms all ease-in-out
+      line-height 2.2
+    
+    &.half
+      width 49%
+      
+      &:first-of-type
+        margin-right 6px
+    
+    &.message
+      border 0
+      background dark-purple
+      height 120px
+      padding 4px
+      
+    &.submit
+      border 1px solid dark-green
+      width 50%
+      padding 10px
+      text-transform uppercase
+      font-weight 600
+      display block
+      margin 0 auto
+      transition background .5s ease
+      
+      &:hover
+        background dark-green
+        cursor pointer
+
+
+
+
+
+
+

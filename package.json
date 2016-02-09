@@ -1,0 +1,24 @@
+{
+  "name": "emroth",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Emily Roth web development and design.",
+  "author": "Emily Roth",
+  "dependencies": {
+    "express": "3.0.0alpha4",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "http": "*"
+  },
+  "engines": {
+    "node": "5.1.1"
+  },
+  "start": "node app.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-notify": "^2.2.0"
+  }
+}

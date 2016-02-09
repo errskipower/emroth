@@ -1,0 +1,22 @@
+//- index.jade
+extend layout
+block title
+  h2.content-title 
+    .recent-work-bkg
+    div.content-title-first Development
+    span.content-title-second 
+      span.content-title-and &amp;
+      span.content-title-second-text Design
+
+block content
+  .call-to-action.wow.fadeIn(data-wow-duration="1s")
+    .call-to-action-line &gt; 22 years old
+    .call-to-action-line &gt; software engineer
+    .call-to-action-line &gt; website designer
+    .call-to-action-line &gt; boston, massachusetts
+    .call-to-action-line 
+      | &gt; 
+      a(href='/hire') hire me.
+
+block scripts
+  script(src='javascripts/index.js')

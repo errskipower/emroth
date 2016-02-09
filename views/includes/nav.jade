@@ -1,0 +1,15 @@
+//- includes/nav.jade
+nav.nav
+  span.mobile-nav
+    i.fa.fa-bars
+  ul.nav-list
+    li.nav-item(class=path=='/'?'active-page':undefined)
+      a.nav-link.home(href="/") home
+    li.nav-item(class=path=='/projects'?'active-page':undefined)
+      a.nav-link(href="/projects") projects
+    li.nav-item(class=path=='/skills'?'active-page':undefined)
+      a.nav-link(href="/skills") skills
+    li.nav-item(class=path=='/about'?'active-page':undefined)
+      a.nav-link(href="/about") about
+    li.nav-item(class=path=='/hire'?'active-page':undefined)
+      a.nav-link(href="/hire") hire

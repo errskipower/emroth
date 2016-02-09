@@ -1,0 +1,847 @@
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700,900");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway';
+  background: -webkit-linear-gradient(top left, #d8cee7 0%, #d8cee7 41%, #c2fc92 100%);
+  background: -moz-linear-gradient(top left, #d8cee7 0%, #d8cee7 41%, #c2fc92 100%);
+  background: -o-linear-gradient(top left, #d8cee7 0%, #d8cee7 41%, #c2fc92 100%);
+  background: -ms-linear-gradient(top left, #d8cee7 0%, #d8cee7 41%, #c2fc92 100%);
+  background: linear-gradient(to bottom right, #d8cee7 0%, #d8cee7 41%, #c2fc92 100%);
+  background-attachment: fixed;
+  color: #222;
+  position: relative;
+}
+.site {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.hidden {
+  display: none !important;
+}
+.visible {
+  display: block !important;
+}
+.white-text {
+  color: #fff;
+}
+.grey-text {
+  color: #7a757a;
+}
+.header {
+  background: #fff;
+  font-family: 'Raleway';
+  padding: 5px 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+/*
+   * Navigation
+   */
+}
+.header .logo-link {
+  text-decoration: none;
+  color: #7a757a;
+  text-align: center;
+  float: left;
+}
+.header .logo-link .title {
+  font-weight: 900;
+  font-size: 24px;
+  margin-right: 5px;
+  word-spacing: -2px;
+}
+.header .logo-link .subtitle {
+  font-family: 'Raleway';
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: -1px;
+}
+.header .nav .mobile-nav {
+  float: right;
+  line-height: 2.1;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+}
+.header .nav .nav-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -30%;
+  width: 30%;
+  height: 100%;
+  background: rgba(94,86,107,0.98);
+  padding: 10px;
+  z-index: 1;
+}
+.header .nav .nav-list .nav-item {
+  padding: 6px 0;
+}
+.header .nav .nav-list .nav-item.active-page:after {
+  content: '\f0d9';
+  font-family: 'FontAwesome';
+  color: #fff;
+  font-size: 10px;
+  padding: 5px;
+}
+.header .nav .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  color: #d8cee7;
+}
+.container {
+  margin: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer {
+  font-size: 9px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  background: #444;
+}
+.content-title {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(34,34,34,0.16);
+  text-transform: uppercase;
+  line-height: 0.65;
+  padding: 40px 10px 36px;
+}
+.content-title.one-line {
+  padding: 40px 10px;
+}
+.content-title .content-title-first {
+  font-size: 48px;
+}
+.content-title .content-title-second {
+  text-indent: 50%;
+  float: left;
+}
+.content-title .content-title-second .content-title-second-text {
+  font-size: 40px;
+}
+.content-title .content-title-second .content-title-and {
+  font-size: 26px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.content-body {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  padding: 10px;
+  background: #444;
+  color: #fff;
+}
+.recent-work-bkg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/work-apollo.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position-x: 30%;
+  z-index: -1;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+}
+.call-to-action {
+  display: block;
+  font-size: 16px;
+}
+.call-to-action .call-to-action-line {
+  margin: 35px 0;
+}
+.call-to-action .call-to-action-line a {
+  color: #c2fc92;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.project {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 10px 0;
+  padding: 5px;
+}
+.project .project-desc,
+.project .project-title {
+  padding: 4px;
+}
+.project .project-img img {
+  width: 100%;
+}
+.project .project-title {
+  display: inline-block;
+  font-family: 'Raleway';
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  vertical-align: text-top;
+}
+.project button.project-btn {
+  padding: 3px 4px 2px;
+}
+.project .project-btn {
+  border: 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 2px;
+  font-size: 9px;
+  padding: 2px 4px;
+  color: #5e566b;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  outline: 0;
+}
+.project .project-btn .fa {
+  margin-left: 2px;
+}
+.project .project-btn.less {
+  padding-bottom: 12px;
+}
+.project .project-desc {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -3px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  color: #444;
+  line-height: 1.5;
+  padding: 6px 10px;
+  -webkit-transition-duration: 0.8s;
+}
+.project .project-desc a {
+  color: #9bc974;
+  outline: none;
+}
+.project .project-tags {
+  padding: 2px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.project .project-tags::after {
+  content: '';
+  -webkit-box-flex: 1000000;
+  -moz-box-flex: 1000000;
+  -o-box-flex: 1000000;
+  -ms-box-flex: 1000000;
+  box-flex: 1000000;
+  -webkit-flex-grow: 1000000;
+  flex-grow: 1000000;
+}
+.project .tag {
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 3px 5px;
+  background: #5e566b;
+  color: #fff;
+  font-size: 10px;
+  margin: 2px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.hire-me {
+  margin: 45px 0 20px;
+}
+.hire-me .hire-me-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.hire-me .hire-me-link {
+  display: block;
+  background: #5e566b;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 0.1em solid rgba(216,206,231,0.23);
+  padding: 15px 10px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+.hire-me .hire-me-link:hover {
+  background: #6d647d;
+}
+.skills-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.skill {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #5e566b;
+  margin: 10px 0;
+  padding: 20px 8px;
+  color: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.skill .skill-name {
+  font-size: 26px;
+  display: inline-block;
+  font-weight: 200;
+}
+.skill .skill-level {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 82%;
+  flex-basis: 82%;
+}
+.skill:nth-of-type(even) .skill-circle {
+  border-color: #d8cee7;
+}
+.skill:nth-of-type(even) .skill-circle.full {
+  background: #d8cee7;
+}
+.skill .skill-circle {
+  display: inline-block;
+  float: right;
+  width: 15px;
+  height: 10px;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #c2fc92;
+  margin: 8px 0;
+}
+.skill .skill-circle:first-of-type {
+  border-right-width: 2px;
+}
+.skill .skill-circle.full {
+  background: #c2fc92;
+}
+.about-title {
+  color: #d8cee7;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+.about-list {
+  font-weight: 200;
+}
+.about-list .about-list-item {
+  padding: 3px 0;
+  text-transform: lowercase;
+}
+.about-list .about-list-item .fa {
+  padding-right: 4px;
+  font-size: 14px;
+}
+.social {
+  margin: 0 5px;
+}
+.social .social-link {
+  font-size: 20px;
+  color: #fff;
+}
+.contact-form .input-wrap {
+  margin: 35px 0;
+}
+.contact-form .input-wrap:first-of-type {
+  margin-top: 20px;
+}
+.contact-form .contact-input {
+  border-width: 0 0 2px;
+  border-color: #5e566b;
+  border-style: solid;
+  background: none;
+  padding: 1px 0 2px 2px;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: 'Raleway';
+  width: 100%;
+  outline: 0;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contact-form .contact-input:focus::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+.contact-form .contact-input:focus::-moz-placeholder {
+  color: rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+.contact-form .contact-input:focus:-ms-input-placeholder {
+  color: rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+.contact-form .contact-input:focus:-moz-placeholder {
+  color: rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+.contact-form .contact-input::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  -webkit-transition: 80ms all ease-in-out;
+  -moz-transition: 80ms all ease-in-out;
+  -o-transition: 80ms all ease-in-out;
+  -ms-transition: 80ms all ease-in-out;
+  transition: 80ms all ease-in-out;
+  line-height: 2.2;
+}
+.contact-form .contact-input::-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  -webkit-transition: 80ms all ease-in-out;
+  -moz-transition: 80ms all ease-in-out;
+  -o-transition: 80ms all ease-in-out;
+  -ms-transition: 80ms all ease-in-out;
+  transition: 80ms all ease-in-out;
+  line-height: 2.2;
+}
+.contact-form .contact-input:-ms-input-placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  -webkit-transition: 80ms all ease-in-out;
+  -moz-transition: 80ms all ease-in-out;
+  -o-transition: 80ms all ease-in-out;
+  -ms-transition: 80ms all ease-in-out;
+  transition: 80ms all ease-in-out;
+  line-height: 2.2;
+}
+.contact-form .contact-input:-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  -webkit-transition: 80ms all ease-in-out;
+  -moz-transition: 80ms all ease-in-out;
+  -o-transition: 80ms all ease-in-out;
+  -ms-transition: 80ms all ease-in-out;
+  transition: 80ms all ease-in-out;
+  line-height: 2.2;
+}
+.contact-form .contact-input.half {
+  width: 49%;
+}
+.contact-form .contact-input.half:first-of-type {
+  margin-right: 6px;
+}
+.contact-form .contact-input.message {
+  border: 0;
+  background: #5e566b;
+  height: 120px;
+  padding: 4px;
+}
+.contact-form .contact-input.submit {
+  border: 1px solid #9bc974;
+  width: 50%;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+.contact-form .contact-input.submit:hover {
+  background: #9bc974;
+  cursor: pointer;
+}
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  .header,
+  .content-title,
+  .content-title.one-line,
+  .content-body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .content-title .content-title-first {
+    font-size: 56px;
+  }
+  .content-title .content-title-second .content-title-second-text {
+    font-size: 46px;
+  }
+  .content-title .content-title-second .content-title-and {
+    font-size: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  .header .nav {
+    float: right;
+  }
+  .header .nav .mobile-nav {
+    display: none;
+  }
+  .header .nav .nav-list {
+    position: relative;
+    width: auto;
+    right: auto;
+    background: none;
+    display: block;
+    padding: 3px 0 0;
+  }
+  .header .nav .nav-list .nav-item {
+    display: inline-block;
+  }
+  .header .nav .nav-list .nav-item:last-of-type {
+    padding-right: 0;
+  }
+  .header .nav .nav-list .nav-item.active-page .nav-link:not(.home) {
+    color: #9bc974;
+    border-bottom: 3px solid #9bc974;
+    padding-bottom: 10px;
+  }
+  .header .nav .nav-list .nav-item.active-page:after {
+    content: '';
+    padding: 0;
+  }
+  .header .nav .nav-list .nav-item .nav-link {
+    color: #5e566b;
+    font-size: 12px;
+    padding: 0 15px;
+  }
+  .content-title .content-title-first {
+    font-size: 72px;
+  }
+  .content-title .content-title-second .content-title-second-text {
+    font-size: 64px;
+  }
+  .content-title .content-title-second .content-title-and {
+    font-size: 49px;
+  }
+}
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  .header,
+  .content-title,
+  .content-title.one-line,
+  .content-body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .header .nav-list .nav-item .nav-link:hover {
+    color: #9bc974;
+  }
+  .content-title .content-title-first {
+    font-size: 92px;
+  }
+  .content-title .content-title-second {
+    text-indent: 50%;
+  }
+  .content-title .content-title-second .content-title-and {
+    font-size: 58px;
+  }
+  .content-title .content-title-second .content-title-second-text {
+    font-size: 78px;
+  }
+  .project-list {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .project-list .project {
+    -webkit-flex-basis: 40%;
+    flex-basis: 40%;
+    padding: 0 10px;
+  }
+  .project-list .project:first-of-type {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+  }
+  .project-list .project .project-title {
+    font-size: 22px;
+    vertical-align: initial;
+  }
+  .project-list .project .project-btn {
+    vertical-align: text-top;
+  }
+  .project-list .project .project-desc {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .project-list .project .tag {
+    font-size: 12px;
+  }
+  .hire-me {
+    width: 50%;
+    margin: 40px auto 20px;
+  }
+  .skills-list {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .skills-list .skill {
+    -webkit-flex-basis: 30%;
+    flex-basis: 30%;
+    margin: 10px;
+  }
+  .contact-form {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+  .content-title .content-title-first {
+    font-size: 92px;
+  }
+  .content-title .content-title-second {
+    text-indent: 45%;
+  }
+  .content-title .content-title-second .content-title-and {
+    font-size: 58px;
+  }
+  .content-title .content-title-second .content-title-second-text {
+    font-size: 78px;
+  }
+}
