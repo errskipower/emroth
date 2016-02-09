@@ -7,17 +7,26 @@ block title
       span.content-title-second-text business
 
 block content
-  form.contact-form.wow.fadeIn(data-wow-duration="1.5s")
-    div.input-wrap
-      input.contact-input.half.first-name(type="text", placeholder="first name", required)
-      input.contact-input.half.last-name(type="text", placeholder="last name", required)
-    div.input-wrap
-      input.contact-input.email(type="email", placeholder="email address", required)
-    div.input-wrap
-      input.contact-input.subject(type="text", placeholder="project type", required)
-    div.input-wrap
-      textarea.contact-input.message(placeholder="I'd like to work with you on...", required)
-    div.input-wrap
-      input.contact-input.submit(type="submit", value="Send")
+  if messageSuccess == 1
+    h3.about-title Thank you for reaching out
+    p.message-success Looking forward to doing business with you!
+      br 
+      | In the meantime, take a look at some <a href="/projects">selected projects</a>.
+  else if messageSuccess == 3
+    h3.about-title Oh no!
+    p.message-success Something went wrong:( Please <a href="/hire">try again</a>.
+  else
+    form.contact-form.wow.fadeIn(data-wow-duration="1.5s", method="post", action="/hire")
+      div.input-wrap
+        input.contact-input.half.first-name(type="text", name="firstName", placeholder="first name", required)
+        input.contact-input.half.last-name(type="text", name="lastName", placeholder="last name", required)
+      div.input-wrap
+        input.contact-input.email(type="email", name="email", placeholder="email address", required)
+      div.input-wrap
+        input.contact-input.subject(type="text", name="subject", placeholder="project type", required)
+      div.input-wrap
+        textarea.contact-input.message(name="message", placeholder="I'd like to work with you on...", required)
+      div.input-wrap
+        input.contact-input.submit(type="submit", name="submit", value="Send")
 
 block scripts
