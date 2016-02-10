@@ -51,4 +51,22 @@ $(document).ready(function() {
   // initialize wow plugin
   new WOW().init();
 
+  // check if user is using IE 9
+  function msieversion() {
+    var ua   = window.navigator.userAgent
+      , msie = ua.indexOf("MSIE ");
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {      // If Internet Explorer, return version number
+      if (parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) <= 9) {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  if (msieversion() && window.location.pathname !== '/updatebrowser') {
+    window.location.href = '/updatebrowser';
+  }
+
 });

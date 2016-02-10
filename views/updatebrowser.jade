@@ -1,0 +1,25 @@
+doctype
+html
+  include ./includes/head.jade
+  body
+    .header.updatebrowser-header
+      include ./includes/logo.jade
+    .updatebrowser
+      h1.update-title Looks like you're using some outdated technology!
+      p.update-text Please update your browser.  I'd suggest one of the following:
+      .update-browsers
+        .update-browser-type
+          a.update-browser-link(href="https://www.google.com/chrome/browser/desktop/")
+            i.fa.fa-chrome 
+        .update-browser-type
+          a.update-browser-link(href="https://www.mozilla.org/en-US/firefox/new/")
+            i.fa.fa-firefox 
+        .update-browser-type
+          a.update-browser-link(href="https://www.microsoft.com/en-us/download/details.aspx?id=48126")
+            i.fa.fa-edge 
+        .update-browser-type
+          a.update-browser-link(href="http://www.opera.com/download")
+            i.fa.fa-opera 
+        .update-browser-type
+          a.update-browser-link(href="https://support.apple.com/downloads/safari")
+            i.fa.fa-safari 

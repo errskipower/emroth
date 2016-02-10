@@ -168,6 +168,9 @@ body {
   letter-spacing: 2px;
   margin-top: -1px;
 }
+.header.updatebrowser-header {
+  overflow: hidden;
+}
 .header .nav .mobile-nav {
   float: right;
   line-height: 2.1;
@@ -664,6 +667,34 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
+.updatebrowser {
+  max-width: 350px;
+  margin: 100px auto 0;
+  background: #444;
+  padding: 10px;
+  color: #fff;
+}
+.updatebrowser .update-title {
+  color: #d8cee7;
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.updatebrowser .update-browsers {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+.updatebrowser .update-browser-type {
+  width: 20%;
+  display: inline-block;
+}
+.updatebrowser .update-browser-link {
+  color: #fff;
+  font-size: 36px;
+}
+.updatebrowser .update-browser-link:hover {
+  color: #c2fc92;
+}
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -833,6 +864,10 @@ you can add resource intensive styles.
   .contact-form {
     width: 60%;
     margin: 0 auto;
+  }
+  .updatebrowser {
+    max-width: 450px;
+    padding: 15px;
   }
 }
 /*********************

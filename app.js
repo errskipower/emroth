@@ -69,4 +69,10 @@ app.post('/hire', function(req, res) {
   });
 })
 
+app.get('/updatebrowser', function(req, res) {
+  res.render('updatebrowser',
+    {title: 'Update Browser', path: req.path}
+  )
+})
+
 app.listen(process.env.PORT || 3000)
