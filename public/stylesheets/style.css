@@ -794,6 +794,7 @@ you can add resource intensive styles.
   }
   .content-title .content-title-second {
     text-indent: 50%;
+    width: 100%;
   }
   .content-title .content-title-second .content-title-and {
     font-size: 58px;
